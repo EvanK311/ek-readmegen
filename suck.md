@@ -1,12 +1,3 @@
-// install Inquirer
-const inquirer = require("inquirer");
-const fs = require("fs");
-const util = require("util");
-
-// require all the depencies I'll need - inquirer, fs
-const writeFileAsync = util.promisify(fs.writeFile)
-
-// create array of questions to prompt user
 function readmePrompt() {
     inquirer.prompt([
         {
@@ -110,30 +101,3 @@ function readmePrompt() {
 
 
 }
-
-
-readmePrompt()
-
-
-
-// write a readME in a markdown file for a template reference
-
-// function that will generate readme template
-// readmePrompt()
-//     .then(function (answer) {
-//         const readMeMd = createMD(answer);
-
-//         return writeFileAsync("ReadMe.md", readMeMd);
-//     })
-//     .then(function () {
-//         console.log("Successfully wrote to index.html");
-//     })
-//     .catch(function (err) {
-//         console.log(err);
-//     });
-
-
-// user answers that inquirer returns and pass them to readME generator function
-
-
-
